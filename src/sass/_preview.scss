@@ -102,4 +102,8 @@
       fill: $color-primary;
     }
   }
+
+  @media only screen and (max-width: $bp-small) {
+    margin-bottom: 3px;
+  }
 }

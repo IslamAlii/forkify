@@ -12,6 +12,13 @@
   z-index: 1000;
   transition: all 0.5s;
 
+  @media only screen and (max-width: $bp-small) {
+    width: 95vw;
+    height: 95vh;
+    padding: 3rem;
+    overflow-y: scroll;
+  }
+
   .btn--close-modal {
     font-family: inherit;
     color: inherit;
@@ -46,12 +53,23 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem 6rem;
+  overflow-y: scroll;
+
+  @media only screen and (max-width: $bp-small) {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
 
   &__column {
     display: grid;
     grid-template-columns: 1fr 2.8fr;
     align-items: center;
     gap: 1.5rem;
+
+    @media only screen and (max-width: $bp-small) {
+      grid-template-columns: 1fr 3fr;
+      gap: 1.5rem;
+    }
 
     & label {
       font-size: 1.5rem;
@@ -90,6 +108,13 @@
     text-transform: uppercase;
     margin-bottom: 1rem;
     grid-column: 1/-1;
+
+    @media only screen and (max-width: $bp-small) {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: 0;
+    }
   }
 
   &__btn {

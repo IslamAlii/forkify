@@ -9,6 +9,24 @@
     margin-left: 4rem;
     height: 4.6rem;
     display: block;
+
+    @media only screen and (max-width: $bp-medium) {
+      height: 3.5rem;
+      margin-left: 0.5rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      margin-left: 0;
+    }
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 5px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
+    row-gap: 10px;
+    border-bottom: 1px solid #fff;
   }
 }
 
@@ -43,16 +61,29 @@
 
     @media only screen and (max-width: $bp-medium) {
       width: auto;
-
       &::placeholder {
         color: white;
       }
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      width: 100%;
+      padding-left: 2rem;
     }
   }
 
   &__btn {
     font-weight: 600;
     font-family: inherit;
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 0.5rem;
+    }
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding-left: 0;
+    justify-content: flex-end;
   }
 }
 
@@ -63,7 +94,12 @@
   &__list {
     list-style: none;
     display: flex;
+    gap: 10px;
     height: 100%;
+
+    @media only screen and (max-width: $bp-small) {
+      justify-content: center;
+    }
   }
 
   &__item {
@@ -82,7 +118,6 @@
     cursor: pointer;
     padding: 0 1.5rem;
     transition: all 0.3s;
-
     display: flex;
     align-items: center;
 
@@ -101,6 +136,15 @@
     &:hover {
       background-color: $color-grey-light-2;
     }
+
+    @media only screen and (max-width: $bp-small) {
+      width: 150px;
+    }
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    grid-column: 1 / -1;
+    margin-right: 0;
   }
 }
 

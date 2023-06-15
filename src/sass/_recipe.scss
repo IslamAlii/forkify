@@ -1,5 +1,6 @@
 .recipe {
   background-color: $color-grey-light-1;
+  position: relative;
 
   ///////////
   // FIGURE
@@ -59,7 +60,16 @@
 
     @media only screen and (max-width: $bp-medium) {
       width: 70%;
+      width: 50%;
+      font-weight: 500;
+      font-size: 2.25rem;
     }
+
+    // @media only screen and (max-width: $bp-small) {
+    //   width: 50%;
+    //   font-weight: 500;
+    //   font-size: 2.25rem;
+    // }
   }
 
   ///////////
@@ -68,6 +78,10 @@
     display: flex;
     align-items: center;
     padding: 7.5rem 8rem 3.5rem 8rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      padding: 5rem 1rem;
+    }
   }
 
   &__info {
@@ -76,8 +90,15 @@
     display: flex;
     align-items: center;
 
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 1.5rem;
+    }
+
     &:not(:last-child) {
       margin-right: 4.5rem;
+      @media only screen and (max-width: $bp-medium) {
+        margin-right: 1rem;
+      }
     }
   }
 
@@ -86,11 +107,21 @@
     width: 2.35rem;
     fill: $color-primary;
     margin-right: 1.15rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      height: 1.5rem;
+      width: 1.5rem;
+      margin-right: 0.5rem;
+    }
   }
 
-  &__info-data {
+  &__info-text {
     margin-right: 0.5rem;
     font-weight: 700;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-weight: 500;
+    }
   }
 
   &__info-buttons {
@@ -105,17 +136,27 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 4rem;
-    width: 4rem;
-    border-radius: 10rem;
-
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
     margin-left: auto;
     margin-right: 1.75rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      height: 3rem;
+      width: 3rem;
+      margin-right: 1rem;
+    }
 
     svg {
       height: 2.25rem;
       width: 2.25rem;
       fill: $color-primary;
+
+      @media only screen and (max-width: $bp-medium) {
+        height: 2rem;
+        width: 2rem;
+      }
     }
   }
 
@@ -129,6 +170,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      padding: 3rem 1rem;
+    }
   }
 
   &__ingredient-list {
@@ -136,6 +181,11 @@
     grid-template-columns: 1fr 1fr;
     gap: 2.5rem 3rem;
     list-style: none;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
   }
 
   &__ingredient {
@@ -160,10 +210,15 @@
   // DIRECTIONS
   &__directions {
     padding: 5rem 10rem;
-    padding-bottom: 5rem;
+    padding-bottom: 7rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      padding: 3rem 1rem;
+      padding-bottom: 9rem;
+    }
   }
 
   &__directions-text {
@@ -175,5 +230,14 @@
 
   &__publisher {
     font-weight: 700;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    width: 60vw;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    width: 100vw;
+    min-height: 80vh;
   }
 }

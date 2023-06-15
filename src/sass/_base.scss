@@ -61,11 +61,45 @@ body {
   grid-template-columns: 1fr 2fr;
   grid-template-areas:
     'head head'
-    'list recipe';
+    'list recipe'
+    'footer footer';
 
   @media only screen and (max-width: $bp-large) {
     max-width: 100%;
     margin: 0;
     border-radius: 0;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    max-width: 100%;
+    min-height: 0;
+    grid-template-rows: 12vh minmax(0, auto) minmax(0, auto);
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'head'
+      'list'
+      'recipe'
+      'footer';
+  }
+}
+
+footer {
+  grid-column: 1 / -1;
+  min-height: 5vh;
+  color: $color-grey-dark-2;
+  background-color: $color-grey-light-2;
+  padding: 2.5rem;
+
+  & .copyright {
+    font-size: 1.3rem;
+    text-align: center;
+    .twitter-link:link,
+    .twitter-link:visited {
+      color: $color-grey-dark-2;
+    }
   }
 }
